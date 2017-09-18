@@ -12,8 +12,16 @@
     tools:context="com.cookiesncrumbs.msalvio.cpe50_ay1718_1stsem_android.EnterActivity">
 
     <Button
+        android:id="@+id/first_app_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="transfer"
         android:text="9/4/17 - First App"/>
+
+    <Button
+        android:id="@+id/list_app_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="transfer"
+        android:text="9/18/17 - List App"/>
 </LinearLayout>

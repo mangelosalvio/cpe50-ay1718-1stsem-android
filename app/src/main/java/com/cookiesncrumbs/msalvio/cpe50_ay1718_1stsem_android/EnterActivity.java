@@ -14,7 +14,14 @@ public class EnterActivity extends AppCompatActivity {
     }
 
     public void transfer(View v){
-        Intent intent = new Intent(this, FirstActivity.class);
-        startActivity(intent);
+        if ( v.getId() == R.id.first_app_button ) {
+            Intent intent = new Intent(this, FirstActivity.class);
+            startActivity(intent);
+        } else if ( v.getId() == R.id.list_app_button ) {
+            Intent intent = new Intent(this, SampleListActivity.class);
+            startActivity(intent);
+        }
+
+
     }
 }
