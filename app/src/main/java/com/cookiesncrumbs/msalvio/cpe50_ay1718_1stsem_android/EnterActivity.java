@@ -21,11 +21,16 @@ public class EnterActivity extends AppCompatActivity {
         } else if ( v.getId() == R.id.list_app_button ) {
             Intent intent = new Intent(this, SampleListActivity.class);
             startActivity(intent);
-        }else if ( v.getId() == R.id.list_act1_button) {
+        } else if ( v.getId() == R.id.list_act1_button) {
             Intent intent = new Intent(this, SimpleListActivity.class);
             startActivity(intent);
+        } else if ( v.getId() == R.id.quiz_2_button) {
+            Intent intent = new Intent(this, BarcodeActivity.class);
+            startActivity(intent);
+        } else if ( v.getId() == R.id.relative_layout_button) {
+            Intent intent = new Intent(this, RelativeLayoutActivity.class);
+            startActivity(intent);
         }
-
 
     }
 }
