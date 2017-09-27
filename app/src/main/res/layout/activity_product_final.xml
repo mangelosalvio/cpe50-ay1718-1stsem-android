@@ -11,6 +11,34 @@
     tools:context="com.cookiesncrumbs.msalvio.cpe50_ay1718_1stsem_android.ProductFinalActivity">
 
     <TextView
+        android:id="@+id/payment_amount_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Amount"/>
+
+    <EditText
+        android:id="@+id/payment_amount_et"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/payment_amount_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/process_button"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/payment_amount_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="process"
+        android:text="Process Payment Amount"/>
+
+
+
+    <TextView
         android:id="@+id/final_tv"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"

@@ -1,6 +1,9 @@
 package com.cookiesncrumbs.msalvio.cpe50_ay1718_1stsem_android;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +22,12 @@ public class BarcodeActivity extends AppCompatActivity {
 
     EditText barcode_et;
 
+    public static final int CHANGE_REQUEST = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode);
-
 
         products = new ArrayList<Product>();
         products.add(new Product("Product#1","12345",2));
@@ -65,7 +69,8 @@ public class BarcodeActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ProductFinalActivity.class);
         intent.putExtra("ans", totalAns);
-        startActivity(intent);
+
+        startActivityForResult(intent,BarcodeActivity.CHANGE_REQUEST);
 
 
     }
@@ -78,5 +83,29 @@ public class BarcodeActivity extends AppCompatActivity {
         }
 
         return null;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if ( resultCode == Activity.RESULT_OK) {
+            if ( requestCode == BarcodeActivity.CHANGE_REQUEST ) {
+
+                String change = String.valueOf(data.getExtras().getDouble("change"));
+
+                new AlertDialog.Builder(this)
+                        .setTitle("Change")
+                        .setMessage(change)
+                        .setPositiveButton("Done", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                products_list.clear();
+                                adapter.notifyDataSetChanged();
+                            }
+                        }).create().show();
+
+            }
+        }
+
     }
 }
