@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/total_amount_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="88"/>
+
+    <EditText
+        android:id="@+id/payment_amount_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Payment Amount"
+        android:inputType="numberDecimal"
+        />
+
+</LinearLayout>

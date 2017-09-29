@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class ProductFinalActivity extends AppCompatActivity {
 
     double ans;
@@ -21,7 +23,9 @@ public class ProductFinalActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.final_tv);
 
         ans = getIntent().getExtras().getDouble("ans");
-        tv.setText(String.valueOf(ans));
+
+        DecimalFormat decimalFormatter = new DecimalFormat("###,###,###,###.00");
+        tv.setText(decimalFormatter.format(ans));
 
         payment_amount_et = (EditText) findViewById(R.id.payment_amount_et);
 

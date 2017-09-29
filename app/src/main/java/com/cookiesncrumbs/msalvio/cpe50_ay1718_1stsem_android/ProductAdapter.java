@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +38,10 @@ public class ProductAdapter extends ArrayAdapter<Product>{
 
         barcode_tv.setText(p.getBarcode());
         product_tv.setText(p.getName());
-        price_tv.setText(String.valueOf(p.getPrice()));
+
+        DecimalFormat decimalFormatter = new DecimalFormat("###,###.00");
+        price_tv.setText(decimalFormatter.format(p.getPrice()
+        ));
 
 
         return v;
