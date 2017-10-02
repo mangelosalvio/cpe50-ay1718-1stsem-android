@@ -1,6 +1,7 @@
 package com.cookiesncrumbs.msalvio.cpe50_ay1718_1stsem_android;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteAbortException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,12 @@ public class EnterActivity extends AppCompatActivity {
             startActivity(intent);
         } else if ( v.getId() == R.id.relative_layout_button) {
             Intent intent = new Intent(this, RelativeLayoutActivity.class);
+            startActivity(intent);
+        } else if ( v.getId() == R.id.sqlite_001_button) {
+            Intent intent = new Intent(this, SqliteActivity.class);
+            startActivity(intent);
+        } else if ( v.getId() == R.id.sqlite_002_button) {
+            Intent intent = new Intent(this, SimpleSqliteActivity.class);
             startActivity(intent);
         }
 

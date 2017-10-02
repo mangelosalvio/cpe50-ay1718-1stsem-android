@@ -21,7 +21,9 @@
         <activity android:name=".BarcodeActivity" />
         <activity android:name=".ProductFinalActivity" />
         <activity android:name=".RelativeLayoutActivity" />
-        <activity android:name=".ProductItemActivity"></activity>
+        <activity android:name=".ProductItemActivity" />
+        <activity android:name=".SqliteActivity" />
+        <activity android:name=".SimpleSqliteActivity"></activity>
     </application>
 
 </manifest>
