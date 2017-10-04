@@ -37,6 +37,9 @@ public class EnterActivity extends AppCompatActivity {
         } else if ( v.getId() == R.id.sqlite_002_button) {
             Intent intent = new Intent(this, SimpleSqliteActivity.class);
             startActivity(intent);
+        } else if ( v.getId() == R.id.et_quiz_003_button) {
+            Intent intent = new Intent(this, OrderActivity.class);
+            startActivity(intent);
         }
 
     }

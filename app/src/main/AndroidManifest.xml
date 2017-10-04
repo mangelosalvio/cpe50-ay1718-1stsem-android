@@ -23,7 +23,9 @@
         <activity android:name=".RelativeLayoutActivity" />
         <activity android:name=".ProductItemActivity" />
         <activity android:name=".SqliteActivity" />
-        <activity android:name=".SimpleSqliteActivity"></activity>
+        <activity android:name=".SimpleSqliteActivity" />
+        <activity android:name=".OrderActivity" />
+        <activity android:name=".CustomerOrderActivity"></activity>
     </application>
 
 </manifest>
